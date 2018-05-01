@@ -5,7 +5,7 @@ import postcss from 'rollup-plugin-postcss'
 import copy from 'rollup-plugin-copy-assets'
 
 export default {
-    input: 'src/main.js',
+    input: 'src/app.js',
     output: {
         file: 'dist/bundle.js',
         format: 'cjs'
@@ -24,7 +24,6 @@ export default {
             ],
             'plugins': [
                 ['external-helpers'],
-                ['transform-react-jsx', {pragma: 'm'}],
             ],
         }),
         copy({
